@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         mindedgeonline shortcuts
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
-// @include      https://wgu.mindedgeonline.com/*
+// @version      0.2
+// @description  navigation shortcuts
+// @updateURL    https://github.com/Coy-Allen/TampermonkeyScripts/raw/main/mindedgeonline%20shortcuts.user.js
+// @downloadURL  https://github.com/Coy-Allen/TampermonkeyScripts/raw/main/mindedgeonline%20shortcuts.user.js
+// @author       coy1010allen
+// @match        https://wgu.mindedgeonline.com/*
 // @grant        none
 // ==/UserScript==
 
