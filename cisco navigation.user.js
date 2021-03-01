@@ -1,8 +1,10 @@
 // ==UserScript==
 // @name         cisco navigation
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
+// @version      0.2
+// @description  Navigate Cisco/WGU CCNA
+// @updateURL    https://github.com/Coy-Allen/TampermonkeyScripts/raw/main/cisco%20navigation.user.js
+// @downloadURL  https://github.com/Coy-Allen/TampermonkeyScripts/raw/main/cisco%20navigation.user.js
+// @author       coy1010allen
 // @match        https://ondemandelearning.cisco.com/cisco-ck-wgu/ccna10/*
 // @grant        none
 // ==/UserScript==
