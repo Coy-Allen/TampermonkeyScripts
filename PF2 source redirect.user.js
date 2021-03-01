@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         PF2 source redirect
-// @version      0.2
+// @version      0.3
 // @description  replace source links with anyflip books/pages
 // @updateURL    https://github.com/Coy-Allen/TampermonkeyScripts/raw/main/PF2%20source%20redirect.user.js
 // @downloadURL  https://github.com/Coy-Allen/TampermonkeyScripts/raw/main/PF2%20source%20redirect.user.js
@@ -20,7 +20,8 @@ let hrefDict = {
     "https://paizo.com/products/btq01y0k":"https://online.anyflip.com/xnqmx/bhnw/mobile/index.html",//core rulebook
     "https://paizo.com/products/btq022bc":"https://online.anyflip.com/hznwz/cggq/mobile/index.html",//advanced rulebook
     "https://paizo.com/products/btq021wf":"https://online.anyflip.com/bujx/ibib/mobile/index.html",//Lost Omens: Gods & Magic
-    "https://paizo.com/products/btq0250x":"https://paizo.com/products/btq0250x",//Lost Omens: Pathfinder Society Guide
+    "https://paizo.com/products/btq01zqa":"https://online.anyflip.com/bujx/ibib/mobile/index.html",//Lost Omens: Gods & Magic (again?)
+    "https://paizo.com/products/btq0250x":"https://paizo.com/products/btq0250x",//Lost Omens: Pathfinder Society Guide (not found)
 }
 let allLinks = document.getElementsByTagName("a");
 for(let i=0;i<allLinks.length;i++){
