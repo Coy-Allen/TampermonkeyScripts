@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         acrobatiq shortcuts
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  try to take over the world!
-// @author       You
-// @include        https://wgu-nx.acrobatiq.com/*
+// @version      0.2
+// @description  navigation shortcuts for acrobatiq
+// @updateURL    https://github.com/Coy-Allen/TampermonkeyScripts/raw/main/acrobatiq%20shortcuts.user.js
+// @downloadURL  https://github.com/Coy-Allen/TampermonkeyScripts/raw/main/acrobatiq%20shortcuts.user.js
+// @author       coy1010allen
+// @include      https://wgu-nx.acrobatiq.com/*
 // @grant        none
 // ==/UserScript==
 
