@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         PF2 source redirect
-// @version      0.3
+// @version      0.4
 // @description  replace source links with anyflip books/pages
 // @updateURL    https://github.com/Coy-Allen/TampermonkeyScripts/raw/main/PF2%20source%20redirect.user.js
 // @downloadURL  https://github.com/Coy-Allen/TampermonkeyScripts/raw/main/PF2%20source%20redirect.user.js
@@ -16,20 +16,23 @@ if (!Array.prototype.last){
 };
 
 let hrefDict = {
-    "https://paizo.com/products/btq01y0m":"https://online.anyflip.com/xnqmx/uygw/mobile/index.html",//bestiary
-    "https://paizo.com/products/btq01y0k":"https://online.anyflip.com/xnqmx/bhnw/mobile/index.html",//core rulebook
-    "https://paizo.com/products/btq022bc":"https://online.anyflip.com/hznwz/cggq/mobile/index.html",//advanced rulebook
-    "https://paizo.com/products/btq021wf":"https://online.anyflip.com/bujx/ibib/mobile/index.html",//Lost Omens: Gods & Magic
-    "https://paizo.com/products/btq01zqa":"https://online.anyflip.com/bujx/ibib/mobile/index.html",//Lost Omens: Gods & Magic (again?)
-    "https://paizo.com/products/btq0250x":"https://paizo.com/products/btq0250x",//Lost Omens: Pathfinder Society Guide (not found)
+    "btq01y0k":"xnqmx/bhnw",//Core Rulebook
+    "btq022bc":"hznwz/cggq",//Advanced Player's Guide
+    "btq01zq7":"hznwz/bwio",//Gamemastery Guide
+    "btq01y0m":"xnqmx/uygw",//Bestiary
+    "btq01zqa":"bujx/ibib", //Lost Omens - Gods & Magic
+    "btq021wf":"bujx/ibib", //Lost Omens - Gods & Magic (Web Supplement)
+    "btq0250x":"hznwz/npey",//Lost Omens - Pathfinder Society Guide
+    "btq01zpx":"vvhfw/divc",//Lost Omens - Character Guide
+    "btq01zoj":"vvhfw/iijy",//Lost Omens - World Guide
 }
 let allLinks = document.getElementsByTagName("a");
 for(let i=0;i<allLinks.length;i++){
     let previous=allLinks[i].previousElementSibling;
     if(previous!==null&&previous.nodeName=="B"&&previous.innerHTML=="Source"){
-        let originalLink=allLinks[i].href.split('?')[0];
+        let originalLink=allLinks[i].href.split('?')[0].split('/').last();
         if(hrefDict[originalLink] === undefined){continue;}
-        allLinks[i].href=hrefDict[allLinks[i].href.split('?')[0]]+"#p="+allLinks[i].firstChild.innerHTML.split(' ').last();
+        allLinks[i].href="https://online.anyflip.com/"+hrefDict[originalLink]+"#p="+allLinks[i].firstChild.innerHTML.split(' ').last();
         console.log(allLinks[i])
     }
 }
